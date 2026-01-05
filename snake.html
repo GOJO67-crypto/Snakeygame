@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="snake.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Snake Game</h1>
+
+    <div class="top-panel">
+      <div class="scoreboard">
+        <span class="label">Score:</span>
+        <span id="score">0</span>
+        <span class="label">Best:</span>
+        <span id="best-score">0</span>
+      </div>
+
+      <div class="controls">
+        <button id="start-pause-btn">Start</button>
+        <button id="restart-btn">Restart</button>
+      </div>
+    </div>
+
+    <div class="options-panel">
+      <div class="option-group">
+        <label for="snake-color">Snake color:</label>
+        <input type="color" id="snake-color" value="#00ff00" />
+      </div>
+
+      <div class="option-group">
+        <label for="food-style">Food style:</label>
+        <select id="food-style">
+          <option value="red-square">Red square</option>
+          <option value="blue-circle">Blue circle</option>
+          <option value="yellow-diamond">Yellow diamond</option>
+          <option value="random">Random color</option>
+        </select>
+      </div>
+    </div>
+
+    <canvas id="game-canvas" width="400" height="400"></canvas>
+
+    <div class="leaderboard-container">
+      <h2>Leaderboard</h2>
+      <ol id="leaderboard-list"></ol>
+    </div>
+  </div>
+
+  <script src="snake.js"></script>
+</body>
+</html>
